@@ -7,6 +7,7 @@ jdk version: 17 temurin
 <aside>
 💡 본 문서에서는 카프카와 레디스를 이용하여 데이터 파이프라인을 설계하는 방법을 Java Spring 예시를 통해 설명합니다.
 </aside>
+[kafka stater documentation](https://kafka.apache.org/documentation/#gettingStarted)
 
 ---
 **시나리오**
