@@ -9,7 +9,8 @@ do
   echo "Building project in directory: $directory-img"
   cd ./$directory
   ./gradlew build
-  docker build -t "$directory" --no-cache .
+  docker build -t "localhost:5252/$directory:latest" --no-cache .
+  docker push "localhost:5252/$directory:latest"
   cd ../
 done
 
