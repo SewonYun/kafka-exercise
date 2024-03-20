@@ -44,3 +44,8 @@ jdk version: 17 temurin
     ```Mysql```
     ```JPA transaction```
 
+---
+![Screenshot_20240313_100408_Noteshelf](https://github.com/SewonYun/kafka-exercise/assets/11643989/903c15b2-d59d-4927-ab42-89d9fc07383d)
+<img width="1348" alt="스크린샷 2024-03-21 오전 1 37 57" src="https://github.com/SewonYun/kafka-exercise/assets/11643989/ecda1c24-406f-415c-88d4-3e24dfcf607e">
+
+
