@@ -23,26 +23,25 @@ jdk version: 17 temurin
 
 ---
 
-# Mono repository style git structure
-
+# Mono repository style git structure( - feature 개발 목표)
 <h2>Producer</h2>
-    ```Kakfa client```
+    Kakfa client
 <h2>Broker</h2>
-    ```Apache Kafaka (version)```
-    ```Clustering (Zookeeper)```
-    ```Topic (partition)```
-    ```Offset```
-    ```Commit```
-    ```Failover```
-    ```Trusted event persistence (kafka default value change to  version)```
+    Apache Kafaka (version),
+    Clustering (Zookeeper),
+    Topic (partition),
+    Offset,
+    Commit,
+    Failover,
+    Trusted event persistence (kafka default value change to  version)
 <h2>Consumer</h2>
-    ```Kakfa client```
-    ```Consumer group```
-    ```Stream```
-    ```Redis Cache```
+    Kakfa client,
+    Consumer group,
+    Stream,
+    Redis Cache
 <h2>Data Warehouse</h2>
-    ```Mysql```
-    ```JPA transaction```
+    Mysql,
+    JPA transaction
 
 ---
 ![Screenshot_20240313_100408_Noteshelf](https://github.com/SewonYun/kafka-exercise/assets/11643989/903c15b2-d59d-4927-ab42-89d9fc07383d)
