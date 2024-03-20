@@ -19,10 +19,9 @@ import java.util.Map;
 @Configuration
 public class ProducerConfiguration {
 
-    @Value(value = "${spring.kafka.bootstrap-servers:kafka:9092}")
+    @Value(value = "${spring.kafka.bootstrap-servers}")
     private String bootstrapAddress;
-
-    @Primary
+    @Bean
     ProducerFactory<String, String> producerFactory() {
         Map<String, Object> configProps = new HashMap<>();
         configProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapAddress);
@@ -31,4 +30,14 @@ public class ProducerConfiguration {
         return new DefaultKafkaProducerFactory<>(configProps);
     }
 
+    @Bean
+    public ProducerConfiguration messageProducer() {
+        return new ProducerConfiguration();
+    }
+
+
+    @Bean
+    public KafkaTemplate<String, String> greetingKafkaTemplate() {
+        return new KafkaTemplate<>(producerFactory());
+    }
 }

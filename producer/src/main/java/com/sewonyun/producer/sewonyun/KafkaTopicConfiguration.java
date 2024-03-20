@@ -14,20 +14,20 @@ import java.util.Map;
 @Configuration
 public class KafkaTopicConfiguration {
 
-    @Value(value = "${spring.kafka.bootstrap-servers:kafka:9092}")
+    @Value("${spring.kafka.bootstrap-servers}")
     private String bootstrapAddress;
 
     @Bean
     public KafkaAdmin admin() {
         Map<String, Object> configs = new HashMap<>();
-        configs.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, "kafka:9092");
+        configs.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapAddress);
         return new KafkaAdmin(configs);
     }
 
     @Bean
     public NewTopic topic1() {
         return TopicBuilder.name("topic-1")
-                .partitions(10)
+                .partitions(1)
                 .replicas(1)
                 .compact()
                 .build();

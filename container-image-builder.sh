@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # 하위 디렉토리 목록
-directories=("producer" "consumer" "warehouse")
+# directories=("producer" "consumer" "warehouse")
+directories=("producer" "consumer")
 
 # 각 디렉토리 빌드
 for directory in "${directories[@]}"
