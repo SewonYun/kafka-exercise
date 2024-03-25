@@ -5,6 +5,13 @@ jdk version: 17 temurin
 ---
 
 <aside>
+ 테스트 간소화 스크립트순서
+source init-devenv-container.sh #컨테이너 이미지 푸시
+source apply-pods.sh #쿠버네티스 팟 초기화 및 등록
+</aside>
+
+---
+<aside>
 💡 본 문서에서는 카프카와 레디스를 이용하여 데이터 파이프라인을 설계하는 방법을 Java Spring 예시를 통해 설명합니다.
 </aside>
 [kafka stater documentation](https://kafka.apache.org/documentation/#gettingStarted)
