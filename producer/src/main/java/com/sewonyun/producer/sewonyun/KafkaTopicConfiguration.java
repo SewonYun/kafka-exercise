@@ -33,4 +33,13 @@ public class KafkaTopicConfiguration {
                 .build();
     }
 
+    @Bean
+    public NewTopic webClickEvent() {
+        return TopicBuilder.name("webClickEvent")
+                .partitions(1)
+                .replicas(1)
+                .compact()
+                .build();
+    }
+
 }
